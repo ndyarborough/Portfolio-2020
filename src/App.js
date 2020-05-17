@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import Navbar from './components/Navbar.jsx';
 import ContentDiv from './components/ContentDiv.jsx';
+
+const pages = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <ContentDiv />
+      <Navbar pages={pages}/>
+      <ContentDiv pages={pages}/>
     </div> 
   );
 }

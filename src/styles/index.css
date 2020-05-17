@@ -1,0 +1,164 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@500&family=Roboto+Slab:wght@300&display=swap');
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto Slab', serif;
+}
+
+.App {
+  background: black;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  min-height: 100vh;
+  width: 15vw; /* Other 85vw is contentDiv */
+  float: left;
+  -webkit-box-shadow: 3px 0px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 0px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 0px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+#nav {
+  min-height: 100vh;
+}
+
+.navHeader {
+  border-bottom: 2px rgba(167, 167, 167, 0.349) solid;
+  height: 22vh;
+  /* padding: 3vh 1vw; */
+  font-size: 2.3rem;
+}
+
+.navHeader h2 {
+  padding: 4vh 0;
+}
+
+.navHeader h4 {
+  font-size: 1rem
+}
+
+.tabBox {
+  padding-top: 2vh;
+}
+
+.contentDiv {
+  background: url('../imgs/white-texture.png');
+  font-family: 'Montserrat', serif;
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 85vw /* other 15vw is Navbar */
+}
+
+#Home, #Projects, #Contact, #Skills {
+  min-height: 100vh;
+}
+
+#Home {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .8) ), url('../imgs/coding-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Home h1 {
+  padding: 8vh 2vw;
+  color: #fff;
+  font-size: 4rem;
+  width: 40%;
+  float: right;
+  text-align: left;
+}
+
+.homeHeader {
+  color: lightblue;
+  width: 35%;
+  padding: 15vh 5vw;
+}
+
+#About p {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  padding-left: 1vw;
+  border-left: solid 10px rgb(36, 124, 117);
+  font-size: 2rem;
+  line-height: 4vh;
+}
+
+.focus {
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(36, 124, 117);
+  margin-bottom: 5vh;
+}
+
+#Skills .pageHeader {
+  margin-bottom: 5vh;
+}
+
+.skillCard {
+  background: #fff;
+  border: solid rgb(36, 124, 117) 1px;
+  height: 25vh;
+  width: 75%;
+  margin: 0 auto; /* Center */
+  margin-bottom: 5vh;
+}
+
+.skillCard h2 {
+  float: left;
+  margin: 2vh 1vw;
+  font-size: 2rem;
+  border-bottom: solid rgb(36, 124, 117) 1px;
+  padding-bottom: 1vh;
+}
+
+#portfolio {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  grid-row-gap: 5vh;
+  column-gap: 4vw;
+  grid-template-columns: auto auto;
+}
+
+.project {
+  border: red solid 1px;
+  height: 40vh;
+}
+
+.pageHeader {
+  color: #fff;
+  background: rgb(36, 124, 117);
+  min-width: 100%;
+  min-height: 11vh; /* Linked to line height on .pageHeader h4 {} */
+  margin-bottom: 5vh;
+}
+
+.pageHeader h4 {
+  line-height: 11vh; /* Linked to min-height on .pageHeader {} */
+  text-align: left;
+  padding-left: 2vw;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
