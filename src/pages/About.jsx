@@ -13,8 +13,7 @@ class About extends Component {
             <div id="About">
                 <PageHeader id="About"/>
                 <p>Full-stack software engineer with a passion for solving problems. Looking for opportunities to use my skillset to make the world a better place with technology.</p>
-
-                <p>A student seeking an internship or entry-level position as a JavaScript Developer. I just want to get a job. I cannot even begin to tell you how bad it actually is. A student seeking an internship or entry-level position as a JavaScript Developer. I just want to get a job. I cannot even begin to tell you how bad it actually is. A student seeking an internship or entry-level position as a JavaScript Developer. I just want to get a job. I cannot even begin to tell you how bad it actually is. A student seeking an internship or entry-level position as a JavaScript Developer. I just want to get a job. I cannot even begin to tell you how bad it actually is</p>
+                <p>Specializing in Front End Javascript development using Node.js</p>
                 <div className="focus">
                     Current Focus => React // Data Structues // Efficiency
                 </div> 

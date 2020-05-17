@@ -15,7 +15,7 @@ class Projects extends Component {
                 <div id="portfolio">
                     {
                         this.state.projects.map(project => {
-                            return <div className="project">{project}</div>
+                        return <div key={project} className="project">{project}</div>
                         })
                     }
                   

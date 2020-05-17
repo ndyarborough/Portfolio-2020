@@ -15,7 +15,7 @@ class Skills extends Component {
                 <PageHeader id="Skills"/>
                 {
                     this.state.skills.map(skill => {
-                    return <Card data={skill} />
+                    return <Card key={skill }data={skill} />
                     })
                 }
             </div>
