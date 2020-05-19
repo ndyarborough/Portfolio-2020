@@ -34,16 +34,19 @@ class Contact extends Component {
                         onChange={this.handleTyping} 
                         type="text"
                     />
-                    <label htmlFor="">Subject</label>
+                    <br />
+                    <label htmlFor="">Email</label>
                     <input 
                         type="text"
-                        placeholder="Optional"
+                        placeholder="Email you want to send from"
                     />
-                    <label htmlFor="">Body</label>
+                    <br />
+                    <label htmlFor="">Message</label>
                     <input 
-                        type="text" 
-                        placeholder="What would you like to say?" 
-                   />
+                        type="text"
+                        placeholder="What would you like to say?"
+                    />
+                    <br />
                     <input type="submit"/>
                 </form>
             </div>

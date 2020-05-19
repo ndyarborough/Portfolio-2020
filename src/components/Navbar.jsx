@@ -1,5 +1,6 @@
 import React from 'react';
-import TabBox from './TabBox.jsx';
+// import TabBox from './TabBox.jsx';
+import Tabs from './Tabs.jsx';
 import NavHeader from './NavHeader.jsx';
 
 class Navbar extends React.Component {
@@ -8,7 +9,8 @@ class Navbar extends React.Component {
         return  (
             <div className="Navbar">
                 <NavHeader />
-                <TabBox />
+                {/* <TabBox /> */}
+                <Tabs />
             </div>
 
         )
