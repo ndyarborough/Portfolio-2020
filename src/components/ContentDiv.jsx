@@ -5,7 +5,6 @@ import Skills from '../pages/Skills.jsx';
 import Projects from '../pages/Projects.jsx';
 import Contact from '../pages/Contact.jsx';
 
-
 class ContentDiv extends React.Component {
     constructor(props) {
         super(props);

@@ -22,20 +22,11 @@ body {
   background-color: #fff;
   min-height: 100vh;
   width: 15vw; /* Other 85vw is contentDiv */
-  float: left;
-  -webkit-box-shadow: 3px 0px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    3px 0px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         3px 0px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-}
-
-#nav {
-  min-height: 100vh;
 }
 
 .navHeader {
   border-bottom: 2px rgba(167, 167, 167, 0.349) solid;
   height: 22vh;
-  /* padding: 3vh 1vw; */
   font-size: 2.3rem;
 }
 
@@ -43,18 +34,39 @@ body {
   padding: 4vh 0;
   color: rgb(36, 124, 117);
   font-family: 'Playfair Display' sans-serif;
+  font-size: 2vw;
 }
 
 .navHeader h4 {
-  font-size: 1rem
+  font-size: 1.4vw;
+}
+
+.nav-items {
+  display: grid;
+  row-gap: 2vh;
+  width: 100%;
+  margin-top: 2vh;
 }
 
 .navRow {
-  height: 5vh;
+  margin: 0 1vw;
+  height: 100%;
 }
 
-.icon {
-  height: 25px;
+/* .navRow:hover {
+  background: #aaa;
+} */
+
+.nav-name {
+  float: left;
+  line-height: 2.3vw;
+  font-size: 1.4rem;
+  margin-left: 0.8vw;
+}
+
+.nav-icon {
+  width: 2.3vw;
+  float: left;
 }
 
 .tabBox {
@@ -125,12 +137,28 @@ body {
 }
 
 .skillCard {
+  display: grid;
+  grid-template-rows: 30% 70%;
   background: #fff;
   border: solid rgb(36, 124, 117) 1px;
-  height: 25vh;
+  /* height: 30vh; */
   width: 75%;
   margin: 0 auto; /* Center */
   margin-bottom: 5vh;
+  text-align: left;
+}
+
+.skill-icons {
+  padding: 2vh 2vw;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.skill-icons img {
+  height: 10vh;
+  max-width: 15vw;
+  margin-bottom: 2vh;
 }
 
 .skillCard h2 {
@@ -141,6 +169,7 @@ body {
   padding-bottom: 1vh;
 }
 
+
 #portfolio {
   display: grid;
   width: 80%;
@@ -148,12 +177,22 @@ body {
   margin-bottom: 5vh;
   grid-row-gap: 5vh;
   column-gap: 4vw;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
 }
 
 .project {
-  border: red solid 1px;
-  height: 40vh;
+  border: rgb(36, 124, 117) solid 1px;
+}
+
+.project h2 {
+  font-size: 2vw;
+  width: 100%;
+  background: #fff;
+}
+
+.project a img {
+  width: 100%;
+  min-height: 80%;
 }
 
 .pageHeader {
@@ -172,19 +211,62 @@ body {
   font-weight: 600;
 }
 
+.contact-content {
+  display: grid;
+  padding: 0 2vw;
+  grid-template-columns: 20% 80%;
+}
+
+.contentCols {
+  text-align: left;
+  padding: 1.5vw;
+}
+
+.contentCols img {
+  width: 10vw;
+  margin-bottom: 3vh;
+}
+
+.contentCols h2 {
+  font-size: 3vw;
+  margin-bottom: 1vh;
+}
+
+.contentCols p {
+  margin-bottom: 1vh;
+  width: 60%;
+}
+
+.contactForm input {
+  text-indent: 0.5vw;
+  width: 100%;
+  height: 5vh;
+  margin: 1vh auto;
+}
+
+.contactForm input:nth-last-of-type(2) {
+  height: 10vh;
+}
+
+.floating-label{
+  position: absolute;
+  top: 0;
+}
+
+
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 1500px) {
-  body {
-    background-color: blue;
-  }
+ 
   #Home h1 {
     font-size: 3rem;
   }
-  .Navbar h2 {
-    font-size: 1.5rem;
+
+  .navHeader {
+    height: 20vh;
   }
+
   #About p {
-    /* line-height: 5vh; */
+    line-height: 5vh; 
     font-size: 1.4rem;
   }
   .focus {
@@ -195,3 +277,15 @@ body {
   }
 
 }
+
+/* @media screen and (max-width: 1200px) {
+  .Navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: red;
+  }
+  .contentDiv {
+    position: relative;
+  }
+} */

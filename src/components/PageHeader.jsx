@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 class PageHeader extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        }
+        this.state = {}
     }
     render() {
         return (
@@ -15,5 +13,4 @@ class PageHeader extends Component {
         )
     }
 }
- 
 export default PageHeader;

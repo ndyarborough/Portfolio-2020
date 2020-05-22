@@ -4,9 +4,7 @@ import PageHeader from './PageHeader.jsx';
 class Page extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        }
+        this.state = {}
     }
     render() {
         return (
@@ -16,5 +14,4 @@ class Page extends React.Component {
         );
     }
 }
-
 export default Page;

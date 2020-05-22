@@ -7,9 +7,7 @@ class NavHeader extends React.Component {
                 <h2>Noah Yarborough</h2>
                 <h4>Full Stack Developer</h4>
             </div>
-            
         );
     }
 }
-
 export default NavHeader;

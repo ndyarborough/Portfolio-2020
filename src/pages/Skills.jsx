@@ -6,7 +6,15 @@ class Skills extends Component {
     constructor(props) {
         super(props);
         this.state={
-            skills: ['HTML', 'CSS', 'JAVASCRIPT', 'BACK END', 'OTHER']
+            skills: ['HTML', 'CSS', 'JAVASCRIPT', 'BACK END', 'OTHER'],
+            skills2: [
+                { name: 'HTML', logos: ['HTML5', 'JSX', 'handlebars']},
+                { name: 'CSS', logos: ['CSS3', 'bootstrap', 'material-ui']},
+                { name: 'JAVASCRIPT', logos: ['react', 'javascript', 'jQuery', 'node-js']},
+                { name: 'BACK END', logos: ['express', 'mysql', 'mongo-db', 'mongoose', 'sequelize']},
+                { name: 'BUILD TOOLS', logos: ['webpack']},
+                { name: 'OTHER', logos: ['github', 'heroku']}
+            ]
         }
     }
     render() {
@@ -14,8 +22,10 @@ class Skills extends Component {
             <div id="Skills">
                 <PageHeader id="Skills"/>
                 {
-                    this.state.skills.map(skill => {
-                    return <Card key={skill }data={skill} />
+                    this.state.skills2.map((skill, index) => {
+                        return (
+                                <Card key={index} data={skill} />
+                        )
                     })
                 }
             </div>
