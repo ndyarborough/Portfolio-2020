@@ -266,6 +266,10 @@ body {
     width: 50%;
   }
 
+  .skill-header h2 {
+    margin-left: 3vw;
+  }
+
   .nav-name {
     font-size: 1.2rem;
   }
@@ -284,6 +288,10 @@ body {
 }
 
 @media screen and (max-width: 780px) {
+  #Home h1 {
+    font-size: 2.3rem;
+  }
+
   .contentDiv {
     width: 90vw;
   }
