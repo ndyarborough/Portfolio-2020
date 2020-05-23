@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
 
-class About extends Component {
+class About extends Component {   
     constructor(props) {
         super(props);
-        this.state={
-            
-        }
+        this.state={}
     }
     render() {
         return (
