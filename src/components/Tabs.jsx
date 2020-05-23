@@ -19,21 +19,21 @@ class Tabs extends Component {
             ],
         }
         this.handleClick = this.handleClick.bind(this);
-        this.handleMouseOver = this.handleMouseOver.bind(this);
-        this.handleMouseLeave = this.handleMouseLeave.bind(this);
+        // this.handleMouseOver = this.handleMouseOver.bind(this);
+        // this.handleMouseLeave = this.handleMouseLeave.bind(this);
     } 
 
-    handleMouseOver = (id, color, target) => {
-        target.style.borderRight = `solid 0.5vw ${color}`;
+    // handleMouseOver = (id, color, target) => {
+    //     target.style.borderRight = `solid 0.5vw ${color}`;
         
-    }
-    handleMouseLeave = (id, target) => {
-        target.style.borderRight = `solid 0.5vw #fff`;
+    // }
+    // handleMouseLeave = (id, target) => {
+    //     target.style.borderRight = `solid 0.5vw #fff`;
 
-    }
+    // }
     handleClick = (id, color, target) => {
         document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        target.style.borderRight = `solid 0.5vw ${color}`;
+        // target.style.borderRight = `solid 0.5vw ${color}`;
     }
     render() {
         return (
@@ -44,8 +44,8 @@ class Tabs extends Component {
                         return (
                             <li 
                                 className="navRow"  
-                                onMouseOver={event => this.handleMouseOver(name, color, event.currentTarget)}
-                                onMouseLeave={event => this.handleMouseLeave(name, event.currentTarget)}
+                                // onMouseOver={event => this.handleMouseOver(name, color, event.currentTarget)}
+                                // onMouseLeave={event => this.handleMouseLeave(name, event.currentTarget)}
                                 onClick={event => this.handleClick(name, color, event.currentTarget)} 
                                 key={name}
                             >
