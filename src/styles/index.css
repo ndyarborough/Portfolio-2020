@@ -258,14 +258,15 @@ body {
   top: 0;
 }
 
-@media screen and (max-width: 1200px) {
-  
-  
+@media screen and (max-width: 1500px) {
   #Home h1 {
     font-size: 3rem;
     width: 50%;
-  }
+  }  
+}
 
+@media screen and (max-width: 1200px) {
+ 
   .skill-header h2 {
     margin-left: 3vw;
   }

@@ -1,13 +1,14 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
-const sendEmail = (email, message, name) => {
+const mailFunctions = {
+    sendEmail : (email, message, name) => {
         const output = `
             <h3>${name} has sent you a message using the email address below.</h3>
             <h4><${email}></h4>
             <h3>================================</h3>
             <p>${message}</p>
             <footer class="footer">
-               <p>&copy; 2018 ENDEE SYSTEMS, Inc.</p>
+                <p>&copy; 2018 ENDEE SYSTEMS, Inc.</p>
             </footer>
             `;
         let transporter = nodemailer.createTransport({
@@ -41,6 +42,7 @@ const sendEmail = (email, message, name) => {
             // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
             // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
         });
+    }
 }
 
-export default sendEmail;
+module.exports = mailFunctions;

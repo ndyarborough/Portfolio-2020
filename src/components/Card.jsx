@@ -19,8 +19,8 @@ class Card extends Component {
                     {
                         logos.map((logo, index) => {
                             return (
-                                    <div>
-                                        <img key={index} src={require(`../imgs/${logo}-logo.png`)} alt={`${name}-icon`}/>
+                                    <div key={index}> 
+                                        <img src={require(`../imgs/${logo}-logo.png`)} alt={`${name}-icon`}/>
                                         <div>
                                             {this.upperCaseFirstLetter(logo)}
                                         </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import sendEmail from '../nodemailer';
 
 class ContactForm extends Component {
     constructor(props) {
@@ -14,16 +13,24 @@ class ContactForm extends Component {
         this.handleTyping = this.handleTyping.bind(this);
     }
     handleSubmit = (event) => {
+        console.log(this.state)
         event.preventDefault();
-        const { email, message } = this.state;
-        sendEmail(email, message);
+        fetch('/sendEmail', {
+            method: 'post',
+            body: JSON.stringify(this.state),
+            headers: {
+                "Content-Type": 'application/json',
+            }
+        }).then(function(response) {
+            // Success, email sent.
+            return response.json()
+        });
     }
     handleTyping = (event) => {
         this.setState({ [event.target.name]: event.target.value})
     }
     render() {
         const { name, email, message } = this.state;
-        console.log(name, email, message)
         return (
             <form className="contactForm" onSubmit={this.handleSubmit}>
                 <input 
