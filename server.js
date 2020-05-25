@@ -19,9 +19,9 @@ app.options('/sendmail', cors());
 app.get('/', (req, res) => res.send('Hello World!'));
 
 app.post('/sendEmail', (req, res) => {
-    console.log(req.body)
     const { email, message , name } = req.body;
     mailFunctions.sendEmail(email, message, name);
+    res.send();
 })
 
 app.get('/hello', (req, res) => {

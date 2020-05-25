@@ -7,30 +7,73 @@ class ContactForm extends Component {
             value: '',
             name: '',
             email: '',
-            message: ''
+            message: '',
+            formFeedback: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleTyping = this.handleTyping.bind(this);
     }
     handleSubmit = (event) => {
-        console.log(this.state)
         event.preventDefault();
-        fetch('/sendEmail', {
-            method: 'post',
-            body: JSON.stringify(this.state),
-            headers: {
-                "Content-Type": 'application/json',
-            }
-        }).then(function(response) {
-            // Success, email sent.
-            return response.json()
-        });
+
+        if(!this.validateForm()) return false;
+        else {
+            fetch('/sendEmail', {
+                method: 'post',
+                body: JSON.stringify(this.state),
+                headers: {
+                    "Content-Type": 'application/json',
+                }
+            }).then(response =>  {
+                
+                console.log(response)
+                // if(response.status).s
+                // // Success, email sent.
+                // this.setState({ 
+                //     formFeedback: 'Your message was successfully sent to Noah!',
+                //     feedbackColor: 'green'
+                // });
+                // console.log(response)
+                // return response.json()
+            });
+        }        
     }
     handleTyping = (event) => {
         this.setState({ [event.target.name]: event.target.value})
     }
-    render() {
+
+    validateForm = () => {
         const { name, email, message } = this.state;
+        // If name is 
+        
+        if(name.length === 0) {
+            this.setState({ 
+                formFeedback: 'Name is empty',
+                feedbackColor: 'red'
+            });
+
+            return false;
+        }
+        // If email is valid
+        if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) === false) {
+            this.setState({ 
+                formFeedback: 'Invalid email address',
+                feedbackColor: 'red'
+            });            return false;
+        }
+        // If message is empty
+        if(message.length === 0) {
+            this.setState({ 
+                formFeedback: 'Message is empty',
+                feedbackColor: 'red'
+            });            return false;
+        }
+        // If no errors, return true
+        return true;
+    }
+
+    render() {
+        const { name, email, message, formFeedback, feedbackColor } = this.state;
         return (
             <form className="contactForm" onSubmit={this.handleSubmit}>
                 <input 
@@ -58,6 +101,9 @@ class ContactForm extends Component {
                 />
                 <br />
                 <input value="Send" type="submit"/>
+                <div style={{color: feedbackColor}}>
+                    {formFeedback}
+                </div>
             </form>
         )
     }

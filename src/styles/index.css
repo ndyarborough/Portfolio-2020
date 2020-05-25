@@ -11,11 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto Slab', serif;
 }
-
 .App {
   background: black;
 }
-
 .Navbar {
   position: fixed;
   left: 0;
@@ -24,7 +22,6 @@ body {
   width: 15vw; /* Other 85vw is contentDiv */
   color: rgb(36, 124, 117);
 }
-
 .contentDiv {
   background: url('../imgs/white-texture.png');
   font-family: 'Montserrat', serif;
@@ -33,88 +30,73 @@ body {
   float: right;
   width: 85vw /* other 15vw is Navbar */
 }
-
 .navHeader {
   border-bottom: 2px rgba(167, 167, 167, 0.349) solid;
   height: 22vh;
   font-size: 2.3rem;
 }
-
 .navHeader h2 {
   padding: 4vh 0;
   color: rgb(36, 124, 117);
   font-family: 'Playfair Display' sans-serif;
   font-size: 2vw;
 }
-
 .navHeader h4 {
   font-size: 1.4vw;
 }
-
 .nav-items {
   display: grid;
   row-gap: 2vh;
   width: 70%;
   margin: 2vh 2vw;
 }
-
 .navRow {
   height: 100%;
   border-radius: 10px;
 }
-
 .navRow:hover {
   background: rgb(36, 124, 117);
   color: #fff;
 }
-
 .navRow:active {
   background: #aaa;
   color: rgb(36, 124, 117);
 }
-
 .nav-name {
   float: left;
   line-height: 2.3vw;
   font-size: 1.4rem;
   margin-left: 0.8vw;
 }
-
 .nav-icon {
   width: 2.3vw;
   float: left;
 }
-
 .tabBox {
   padding-top: 2vh;
 }
-
 #Home {
-  min-height: 50vh;
+  overflow: auto;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1) ), url('../imgs/coding-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #Home h1 {
-  padding: 10vh 2vw;
+  margin: 10vh 2vw;
   color: #fff;
   font-size: 4rem;
-  width: 40%;
+  width: 60%;
   float: right;
   text-align: left;
 }
-
 .homeHeader {
   color: lightblue;
   width: 35%;
   padding: 15vh 5vw;
 }
-
 #About {
   text-align: left;
 }
-
 #About p {
   width: 70%;
   margin: 0 auto;
@@ -124,7 +106,6 @@ body {
   font-size: 2rem;
   /* line-height: 4vh; */
 }
-
 .focus {
   font-size: 2rem;
   font-weight: 800;
@@ -133,11 +114,9 @@ body {
   margin-bottom: 5vh;
   width: 75%;
 }
-
 #Skills .pageHeader {
   margin-bottom: 5vh;
 }
-
 .skillCard {
   display: grid;
   grid-template-rows: auto auto;
@@ -148,7 +127,6 @@ body {
   margin-bottom: 5vh;
   text-align: left;
 }
-
 .skill-icons {
   padding-top: 3vh;
   padding-bottom: 5vh;
@@ -158,13 +136,11 @@ body {
   grid-template-columns: auto auto auto auto;
   row-gap: 3vh;
 }
-
 .skill-icons img {
   height: 10vh;
   max-width: 15vw;
   margin-bottom: 2vh;
 }
-
 .skillCard h2 {
   float: left;
   margin: 2vh 1vw;
@@ -172,8 +148,6 @@ body {
   border-bottom: solid rgb(36, 124, 117) 1px;
   padding-bottom: 1vh;
 }
-
-
 #portfolio {
   display: grid;
   width: 80%;
@@ -183,22 +157,18 @@ body {
   column-gap: 4vw;
   grid-template-columns: 50% 50%;
 }
-
 .project {
   border: rgb(36, 124, 117) solid 1px;
 }
-
 .project h2 {
   font-size: 2vw;
   width: 100%;
   background: #fff;
 }
-
 .project a img {
   width: 100%;
   min-height: 80%;
 }
-
 .pageHeader {
   color: #fff;
   background: rgb(36, 124, 117);
@@ -206,7 +176,6 @@ body {
   min-height: 11vh; /* Linked to line height on .pageHeader h4 {} */
   margin-bottom: 5vh;
 }
-
 .pageHeader h4 {
   line-height: 11vh; /* Linked to min-height on .pageHeader {} */
   text-align: left;
@@ -214,133 +183,105 @@ body {
   font-size: 2.5rem;
   font-weight: 600;
 }
-
 .contact-content {
   display: grid;
   padding: 0 2vw;
   grid-template-columns: 20% 80%;
   margin-bottom: 5vh;
 }
-
 .contentCols {
   text-align: left;
   padding: 1.5vw;
 }
-
 .contentCols img {
   width: 10vw;
   margin-bottom: 3vh;
 }
-
 .contentCols h2 {
   font-size: 3vw;
   margin-bottom: 1vh;
 }
-
 .contentCols p {
   margin-bottom: 1vh;
   width: 60%;
 }
-
 .contactForm input {
   text-indent: 0.5vw;
   width: 100%;
   height: 5vh;
   margin: 1vh auto;
 }
-
 .contactForm input:nth-last-of-type(2) {
   height: 10vh;
 }
-
 .floating-label{
   position: absolute;
   top: 0;
 }
-
 @media screen and (max-width: 1500px) {
   #Home h1 {
     font-size: 3rem;
-    width: 50%;
   }  
 }
-
 @media screen and (max-width: 1200px) {
- 
   .skill-header h2 {
     margin-left: 3vw;
   }
-
   .nav-name {
     font-size: 1.2rem;
   }
 }
-
 @media screen and (max-width: 1000px) {
   .nav-name {
     font-size: .9rem;
     margin-left: 0.8vw;
   }
-
   .skill-icons {
     grid-template-columns: auto auto auto;
     row-gap: 5vh;
   }
 }
-
 @media screen and (max-width: 780px) {
   #Home h1 {
     font-size: 2.3rem;
   }
-
   .contentDiv {
     width: 90vw;
   }
-
   .pageHeader {
     padding-left: 4vw;
   }
-
   .Navbar {
     width: 10vw;
   }
-
   .navHeader, .nav-name {
     display: none;
   }
-
   .navRow {
     width: auto;
   }
-
   .navRow:hover {
     background: #fff;
   }
-
   .navRow img {
     width: 70%;
     border-radius: 10px;
     padding: 5px;
   }
-
   .nav-items {
     width: auto;
   }
-
   .navRow img:hover {
     background: #aaa;
   }
-  
   .skill-icons {
     grid-template-columns: auto auto;
     row-gap: 5vh;
   }
-
   .skill-icons img {
     max-width: 20vw;
     margin-bottom: 2vh;
   }
-
   #portfolio {
     grid-template-columns: auto;
   }
