@@ -230,15 +230,15 @@ body {
   .nav-name {
     font-size: 1.2rem;
   }
+  .skill-icons {
+    grid-template-columns: auto auto auto;
+    row-gap: 5vh;
+  }
 }
 @media screen and (max-width: 1000px) {
   .nav-name {
     font-size: .9rem;
     margin-left: 0.8vw;
-  }
-  .skill-icons {
-    grid-template-columns: auto auto auto;
-    row-gap: 5vh;
   }
 }
 @media screen and (max-width: 780px) {

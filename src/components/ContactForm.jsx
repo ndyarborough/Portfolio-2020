@@ -18,24 +18,29 @@ class ContactForm extends Component {
 
         if(!this.validateForm()) return false;
         else {
-            fetch('/sendEmail', {
+            fetch('/sendEmail', { 
                 method: 'post',
                 body: JSON.stringify(this.state),
                 headers: {
                     "Content-Type": 'application/json',
                 }
-            }).then(response =>  {
-                
-                console.log(response)
-                // if(response.status).s
-                // // Success, email sent.
-                // this.setState({ 
-                //     formFeedback: 'Your message was successfully sent to Noah!',
-                //     feedbackColor: 'green'
-                // });
-                // console.log(response)
-                // return response.json()
-            });
+            }).then(res => res.json())
+                .then(response  => {
+                    if(response.accepted) {
+                        this.setState({ 
+                            formFeedback: 'Successfully sent email',
+                            feedbackColor: 'green',
+                            name: '',
+                            email: '',
+                            message: ''
+                        })
+                    } else {
+                        this.setState({ 
+                            formFeedback: 'Not a real email address',
+                            feedbackColor: 'red'
+                        })
+                    }
+                })
         }        
     }
     handleTyping = (event) => {
@@ -44,14 +49,12 @@ class ContactForm extends Component {
 
     validateForm = () => {
         const { name, email, message } = this.state;
-        // If name is 
-        
+        // If name is empty
         if(name.length === 0) {
             this.setState({ 
                 formFeedback: 'Name is empty',
                 feedbackColor: 'red'
             });
-
             return false;
         }
         // If email is valid
@@ -59,14 +62,16 @@ class ContactForm extends Component {
             this.setState({ 
                 formFeedback: 'Invalid email address',
                 feedbackColor: 'red'
-            });            return false;
+            });            
+            return false;
         }
         // If message is empty
         if(message.length === 0) {
             this.setState({ 
                 formFeedback: 'Message is empty',
                 feedbackColor: 'red'
-            });            return false;
+            });            
+            return false;
         }
         // If no errors, return true
         return true;

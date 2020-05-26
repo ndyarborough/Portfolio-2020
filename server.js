@@ -20,12 +20,15 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 app.post('/sendEmail', (req, res) => {
     const { email, message , name } = req.body;
-    mailFunctions.sendEmail(email, message, name);
-    res.send();
-})
-
-app.get('/hello', (req, res) => {
-    res.send('Hello')
+    mailFunctions.sendEmail(email, message, name)
+        .then(info => {
+            console.log(info)
+            res.send(info)
+        })
+        .catch(err => {
+            console.log(err)
+            res.send(err)
+        })
 })
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
