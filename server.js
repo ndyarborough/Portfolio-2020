@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 // Cors
 app.use(cors())
 
-app.options('/sendmail', cors());
+app.options('/sendEmail', cors());
 
 // app.get('/', (req, res) => res.send('Hello World!'));
 
