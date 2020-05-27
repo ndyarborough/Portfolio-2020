@@ -48,7 +48,7 @@ body {
   display: grid;
   row-gap: 2vh;
   width: 70%;
-  margin: 2vh 2vw;
+  margin: 2vh auto;
 }
 .navRow {
   height: 100%;
@@ -166,8 +166,8 @@ body {
   background: #fff;
 }
 .project a img {
+  /* height: 20vh; */
   width: 100%;
-  min-height: 80%;
 }
 .pageHeader {
   color: #fff;
@@ -264,12 +264,13 @@ body {
     background: #fff;
   }
   .navRow img {
-    width: 70%;
+    width: 100%;
     border-radius: 10px;
     padding: 5px;
   }
   .nav-items {
-    width: auto;
+    width: 50%;
+    margin: 2vh 1.4vw;
   }
   .navRow img:hover {
     background: #aaa;
@@ -283,6 +284,12 @@ body {
     margin-bottom: 2vh;
   }
   #portfolio {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skill-icons {
     grid-template-columns: auto;
   }
 }
