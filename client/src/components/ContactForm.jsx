@@ -37,7 +37,7 @@ class ContactForm extends Component {
                         })
                     } else {
                         this.setState({ 
-                            formFeedback: 'Not a real email address',
+                            formFeedback: 'Something went wrong, check email',
                             feedbackColor: 'red'
                         })
                     }
