@@ -17,7 +17,7 @@ const mailFunctions = {
             secure: true, // true for 465, false for other ports
             auth: {
                 user: 'ndyarborough1997@gmail.com', // generated ethereal user
-                pass: 'Capsrno1' // generated ethereal password
+                pass: '' // generated ethereal password
             }
         });
     
