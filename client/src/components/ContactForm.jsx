@@ -8,14 +8,15 @@ class ContactForm extends Component {
             name: '',
             email: '',
             message: '',
-            formFeedback: ''
+            formFeedback: '',
+            feedbackColor: 'black'
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleTyping = this.handleTyping.bind(this);
     }
     handleSubmit = (event) => {
         event.preventDefault();
-
+        this.setState({ formFeedback: 'Sending...'})
         if(!this.validateForm()) return false;
         else {
             fetch('/sendEmail', { 
