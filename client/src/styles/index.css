@@ -286,6 +286,18 @@ body {
   #portfolio {
     grid-template-columns: auto;
   }
+
+  .contact-content {
+    display: block;
+    padding: 0 2vw;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 5vh;
+  }
+
+  .contentCols div {
+    width: 100%;
+    float: left;
+  }
 }
 
 @media screen and (max-width: 500px) {
