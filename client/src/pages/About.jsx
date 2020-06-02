@@ -13,7 +13,7 @@ class About extends Component {
                 <p>Full-stack software engineer with a passion for solving problems. Looking for opportunities to use my skillset to make the world a better place with technology.</p>
                 <p>Specializing in Front End Javascript development using Node.js</p>
                 <div className="focus">
-                    Current Focus => React // Data Structues // Efficiency
+                    Current Focus => React // Data Structures // Efficiency
                 </div> 
             </div>
         )
